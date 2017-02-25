@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jogo matemático</title>	
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body onload="limpar()">
+
+<header>
+	<div class="autor">Descubra o resultado da multiplicação</div>
+</header>
+	<section>
+		<div id="numero1">0</div>
+		<div id="sinal">*</div>
+		<div id="numero2">0</div>
+		<div id="igual">=</div>	
+		<input type="text" id="campo">
+		<div id="score">0</div>
+		<div id="scoreNome">Pontuação</div>
+		<div style="clear: both;"></div>
+		<button onclick="valida();">Resultado</button>
+		<audio id="tiro" src="tiro.mp3"></audio>
+		<audio id="bomba" src="bomba.mp3"></audio>	
+	</section>
+	
+	<footer>
+		Projeto desenvolvido para estudo, @Josiel Ernane.
+	</footer>
+	
+</body>
+</html>
