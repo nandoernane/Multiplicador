@@ -12,21 +12,22 @@ $(document).ready(function(){
     var dataS = Math.random() * 12;
     var numS = $("#numero2").val(parseInt(dataS));
   }
-});
 
-$("#calcular").click(function(){
-  var result = $("#numero1").val() * $("#numero2").val();
-  var resultClient = $("#campo").val();
+  $("#calcular").click(function(){
+    var result = $("#numero1").val() * $("#numero2").val();
+    var resultClient = $("#campo").val();
 
-  if("#campo" != null){
-    if(result == resultClient){
-      alert("Acertou Mizerav");
-      setNum();
+    if("#campo" != null){
+      if(result == resultClient){
+        alert("Acertou Mizerav");
+        setNum();
+      } else {
+        alert("Errou Mizerav");
+        setNum();
+      }
     } else {
-      alert("Errou Mizerav");
-      setNum();
+      alert("Campo Vazio");
     }
-  } else {
-    alert("Campo Vazio");
-  }
+  });
+
 });
