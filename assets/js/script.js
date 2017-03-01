@@ -11,18 +11,25 @@ $(document).ready(function(){
 
     var dataS = Math.random() * 12;
     var numS = $("#numero2").val(parseInt(dataS));
+
+    $("#campo").val("");
   }
 
   $("#calcular").click(function(){
     var result = $("#numero1").val() * $("#numero2").val();
     var resultClient = $("#campo").val();
 
-    if("#campo" != null){
+    var numA = $("#scoreA").val();
+    var numE = $("#scoreE").val();
+
+    if("#campo" != ""){
       if(result == resultClient){
-        alert("Acertou Mizerav");
+        alert("Resposta correta!");
+        $("#scoreA").val(numA + 1);
         setNum();
       } else {
-        alert("Errou Mizerav");
+        alert("Resposta Errada!");
+        $("#scoreE").val(numE + 1);
         setNum();
       }
     } else {
