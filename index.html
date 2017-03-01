@@ -8,23 +8,26 @@
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 	</head>
 	<body onload="limpar()">
-
 		<header>
 			<div class="autor">Descubra o resultado da multiplicação</div>
 		</header>
 
 		<section>
-			<div id="numero1">0</div>
+			<div id="numero1"></div>
 			<div id="sinal">*</div>
 			<div id="numero2">0</div>
 			<div id="igual">=</div>
-			<input type="text" id="campo">
+
+			<input type="number" id="campo" autofocus="autofocus">
+
 			<div id="score">0</div>
 			<div id="scoreNome">Pontuação</div>
 			<div style="clear: both;"></div>
+
 			<button onclick="valida();">Resultado</button>
-			<audio id="tiro" src="tiro.mp3"></audio>
-			<audio id="bomba" src="bomba.mp3"></audio>
+
+			<!-- <audio id="tiro" src="tiro.mp3"></audio>
+			<audio id="bomba" src="bomba.mp3"></audio> -->
 		</section>
 
 		<footer>

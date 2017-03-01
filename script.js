@@ -1,27 +1,32 @@
+$('#numero1').append(Math.floor(Math.random() * 15));
+$('#numero2').append(Math.floor(Math.random() * 15));
+$('#campo').value = "";
+
 function valida(){
-	var numero1 = document.getElementById("numero1").innerHTML;
-	var numero2 = document.getElementById("numero2").innerHTML;
-	var campo = document.getElementById("campo").value;
-	var score = parseInt(document.getElementById('score').innerHTML);
+	var numero1 = $("#numero1").value;
+	var numero2 = $("#numero2").value;
+	var campo = $("campo").value;
+	// var score = parseInt(document.getElementById('score').innerHTML);
 
 	if(numero1 * numero2 == campo){
 		score = score + 1;
 		document.getElementById('score').innerHTML = score;
-		document.getElementById('tiro').play();
+		$('#tiro').play();
 	}
 	else{
 		score = score - 1;
+		alert("você errou!");
 		document.getElementById('score').innerHTML = score;
-		document.getElementById('bomba').play();
+		$.('#bomba').play();
 	}
-	
-	limpar();
+
+	// limpar();
 }
 
 function limpar(){
-	document.getElementById('campo').value = "";
-	var rand = Math.floor(Math.random() * 15);
-	var rand2 = Math.floor(Math.random() * 15);
-	document.getElementById("numero1").innerHTML = rand;
-	document.getElementById("numero2").innerHTML = rand2;
+	// document.getElementById('campo').value = "";
+	// var rand = Math.floor(Math.random() * 15);
+	// var rand2 = Math.floor(Math.random() * 15);
+	// $("numero1").append(rand);
+	// $("numero2").append(rand2);
 }
