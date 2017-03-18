@@ -1,0 +1,23 @@
+{
+  "name": "jogo-matematico",
+  "description": "jogo matematico",
+  "main": "jogo-matematico/index.html",
+  "keywords": [
+    "jogo"
+  ],
+  "authors": [
+    "Josiel Ernane Beserra"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nandoernane/jogo-matematico",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

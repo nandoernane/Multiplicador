@@ -3,40 +3,58 @@
 	<head>
 		<title>Jogo Matemático</title>
 		<meta   charset="utf-8">
-		<script type="text/javascript" 	src="assets/js/jquery.js"></script>
-		<script type="text/javascript" 	src="assets/js/script.js"></script>
-		<link 	rel="stylesheet" 				href="assets/css/style.css">
-
+		<script type="text/javascript" src="assets/components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="assets/components/jquery/dist/script.js"></script>
+		<link rel="stylesheet" href="assets/components/bootstrap/dist/css/style.css">
+		<link rel="stylesheet" href="assets/components/bootstrap/dist/css/bootstrap.min.css">
 	</head>
 	<body>
 		<header>
 			<div class="autor">
-				<h2>Descubra o resultado da multiplicação</h2>
+				<h2>Descubra o resultado da multiplicação</h2>				
 			</div>
 		</header>
 		<section>
-			<div class="inputs">
-				<input id="numero1" 	type="text" name="" value="0"/>
-				<input id="operador" 	type="text" name="" value="x"/>
-				<input id="numero2" 	type="text" name="" value="0"/>
-				<input id="operador" 	type="text" name="" value="="/>
-				<input id="campo" 		type="text" required="required"/>
-				<div class="responses">
-					<span>Corretas: </span><input id="scoreA" type="text"/><br>
-					<span>Erradas: 	</span><input id="scoreE" type="text"/><br>
-					<span>Nota Final: 	</span><input id="scoreM" type="text"/>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="body-top">					
+						<div class="inputs">
+							<input id="numero1" type="text" name="numero1" value="0"/>
+							<input id="operador" type="text" disabled="true" name="operador" value="x"/>
+							<input id="numero2" type="text" name="numero2" value="0"/>
+							<input id="operador" type="text" disabled="true" name="operador" value="="/>
+							<input id="campo" type="text" class="equal" required="required"/>								
+							<button id="calcular">Responder</button>				
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="actions">
-				<button id="calcular">Resultado</button>
-				<audio id="tiro" 	src="assets/audio/tiro.mp3"></audio>
-				<audio id="bomba" src="assets/audio/bomba.mp3"></audio>
+					
+					<div class="responses">
+						<span>Corretas: </span><input type="text" id="scoreA" name="scoreA" value="0" disabled="true"><br>
+						<span>Erradas: </span><input id="scoreE" type="text" value="0" disabled="true"/><br>
+						<span>Nota Final: 	</span><input id="scoreT" type="text" value="0" disabled="true"/>
+					</div>
+					<input type="text" id="resultado" value="Resultado" disabled="true">
 			</div>
 		</section>
 		<footer>
-			<div class="footer">
-				<p>Projeto desenvolvido para estudo, @Josiel Ernane.</p>
+			<div id="footer-input">
+				<label>Configure a seguência aleatória que deseja praticar</label>		
+				<input type="number" id="vlA" name="vlA" value="0" />
+				<input type="number" id="vlB" name="vlB" value="0" />
+				<button class="btn btn-success" id="iniciar">NEXT</button>
+				
+				<p>
+				<br/>Exemplo para gerar seguências para [2] * [2] <br/>
+				Equivale dizer que o primeiro digito irá de 0 a 2 <br/>
+				Equivale dizer que o segundo digito irá de 0 a 2 <br/>
+				Dessa forma estamos gerando numeros aleatórios que vão<br/>
+				de 0 a 2 e serão multiplicados  de forma horizontal</p>
+
 			</div>
+			<p>
+			<br/>"Projeto aprenda a multiplicar numeros"
+				</p>
 		</footer>
 	</body>
 </html>
